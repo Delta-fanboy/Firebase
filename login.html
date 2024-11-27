@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sign.css">
+    <title>Login / Signup</title>
+</head>
+
+<body>
+    <main>
+        <h1>Anime Database</h1>
+        <div class="form-container">
+            <!-- Login Form -->
+            <div id="loginForm">
+                <h3>Log in</h3>
+                <div>
+                    <label>Email:</label><br>
+                    <input id="loginEmail" type="email">
+                </div>
+                <div>
+                    <label>Password:</label><br>
+                    <input id="loginPassword" type="password">
+                </div>
+                <div class="loginBox">
+                    <button id="loginBtn" onclick="login()">Log in</button>
+                </div>
+                <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up here</a></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signupForm" style="display: none;">
+                <h3>Sign up</h3>
+                <div>
+                    <label>First Name:</label><br>
+                    <input id="fname" type="text">
+                </div>
+                <div>
+                    <label>Last Name:</label><br>
+                    <input id="lname" type="text">
+                </div>
+                <div>
+                    <label>Email:</label><br>
+                    <input id="email" type="email">
+                </div>
+                <div>
+                    <label>Password:</label><br>
+                    <input id="password" type="password">
+                </div>
+                <div class="signUpBox">
+                    <button onclick="signUp()">Sign up</button>
+                </div>
+                <p>Already have an account? <a href="#" onclick="toggleForms()">Log in here</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Firebase and JS files -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+
+    <script src="js/register.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+
+</html>

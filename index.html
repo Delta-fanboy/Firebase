@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Database</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    
+        <div class="topnav">
+            <h2 id="hei"></h2>
+            <a href="index.html">Add Anime</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="" onclick="logout()">Log Out</a>
+        </div>
+    
+    <h1>Anime Database</h1>
+
+
+
+    <!-- Form to Add Anime -->
+    <div id="animeForm">
+        <input type="text" id="title" placeholder="Anime Name" required>
+        <input type="date" id="releaseDate" placeholder="Release Date" required>
+        <input type="number" id="rating" placeholder="Rating (1-10)" min="1" max="10" required>
+        <input type="text" id="genre" placeholder="Genre" required>
+        <input type="url" id="imageUrl" placeholder="Image URL" required>
+        <button id="BtnCreate" onclick="addItem()">Add Anime</button>
+    </div>
+
+
+    
+    <!-- Må hente inn eksterne rammeverk/bibliotek for å kunne laste inn js frå anna fil-->
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+    
+    <!-- Link to the external JS file -->
+
+    <script src="/js/app.js"></script>
+    <script src="/js/logout.js"></script>
+    <script src="/js/register.js"></script>
+</body>
+</html>
